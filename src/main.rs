@@ -1,5 +1,8 @@
 mod gui;
 
+use eframe::NativeOptions;
+use gui::MyApp;
+
 fn main() {
     
     let options = NativeOptions::default();
