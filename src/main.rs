@@ -4,8 +4,9 @@ use eframe::NativeOptions;
 use gui::MyApp;
 
 fn main() {
-    let options = NativeOptions {
-
+    // Set up NativeOptions with software (Glow) renderer
+    let options = eframe::NativeOptions {
+        renderer: eframe::Renderer::Glow, // Software fallback
         ..Default::default()
     };
 
