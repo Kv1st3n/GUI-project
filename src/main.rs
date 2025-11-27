@@ -2,17 +2,11 @@ mod gui;
 
 fn main() {
     
-    for n in 1..20 {
-        if n % 15 == 0 {
-            println!("fizzbuzz");
-        } else if n % 3 == 0 {
-            println!("fizz");
-        } else if n % 5 == 0 {
-            println!("buzz");
-        } else {
-            println!("{}", n);
-        }
-    }
+    let options = NativeOptions::default();
+    eframe::run_native(
+        "My egui App",
+        options,
+        Box::new(|_cc| Box::new(MyApp::new())),
+    );
 
-    gui::test("This is a test");
 }
