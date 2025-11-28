@@ -8,9 +8,8 @@ fn main() {
         ..Default::default()
     };
 
-    // Handle the Result properly
     if let Err(e) = eframe::run_native(
-        "My egui App",
+        "To do list",
         options,
         Box::new(|_cc| Ok(Box::new(MyApp::new()))),
     ) {
